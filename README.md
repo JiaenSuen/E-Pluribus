@@ -1,21 +1,42 @@
+<div align="center">
+
+<h1>🌿</h1>
+
 # E pluribus : A Multi-Task Vision-Query2Contextual Framework for Ecological Research Assistant
+
 *AI-powered ecological research assistant integrating species recognition, literature retrieval, and context-aware knowledge synthesis.*
 
+</div>
 
+---
 
 This is a lightweight Flask prototype for an ecological research assistant. The frontend accepts one image and one research query, then displays the final LLM-style synthesis, module trace, uncertainty notes, and top evidence documents.
 
 The backend is intentionally modular. The default M1–M6 modules return placeholder outputs so the UI and pipeline can be tested before trained models, retrieval services, rerankers, or local LLM endpoints are connected.
 
-
+---
 
 ## Research Project & Product
-![image](__Report__/E-pluribus-Poster.png)
 
+<p align="center">
+  <img
+    src="__Report__/E-pluribus-Poster.png"
+    alt="E pluribus Research Project Poster"
+    width="90%"
+  />
+</p>
+
+---
 
 ## System Architecture
-![image](__Report__/ModuleConcept/SystemArchitectute.png)
 
+<p align="center">
+  <img
+    src="__Report__/ModuleConcept/SystemArchitectute.png"
+    alt="E pluribus System Architecture"
+    width="90%"
+  />
+</p>
 
 ```text
 User image + query
@@ -28,32 +49,32 @@ User image + query
   -> Flask JSON response + browser UI
 ```
 
-
+---
 
 ## E-ConvNeXt Model Applications
 
 <table>
   <tr>
-    <th align="center">Feature Extractor</th>
-    <th align="center">YOLO-v10n Backbone</th>
-    <th align="center">Tiny Image Captioning</th>
+    <th align="center" width="33%">Feature Extractor</th>
+    <th align="center" width="33%">YOLO-v10n Backbone</th>
+    <th align="center" width="33%">Tiny Image Captioning</th>
   </tr>
   <tr>
-    <td align="center" width="33%">
+    <td align="center" valign="middle">
       <img
         src="__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt.png"
         alt="E-ConvNeXt as Feature Extractor"
         width="100%"
       />
     </td>
-    <td align="center" width="33%">
+    <td align="center" valign="middle">
       <img
         src="__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-YOLO.png"
         alt="E-ConvNeXt as Backbone of YOLO-v10n"
         width="100%"
       />
     </td>
-    <td align="center" width="33%">
+    <td align="center" valign="middle">
       <img
         src="__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-Light-Transformer.png"
         alt="E-ConvNeXt and Light Transformer for Tiny Image Captioning"
@@ -62,13 +83,13 @@ User image + query
     </td>
   </tr>
   <tr>
-    <td align="center">
+    <td align="center" valign="top">
       <sub>E-ConvNeXt as a lightweight feature extractor.</sub>
     </td>
-    <td align="center">
+    <td align="center" valign="top">
       <sub>E-ConvNeXt as the backbone of YOLO-v10n.</sub>
     </td>
-    <td align="center">
+    <td align="center" valign="top">
       <sub>E-ConvNeXt with a Light Transformer decoder.</sub>
     </td>
   </tr>
@@ -78,39 +99,38 @@ User image + query
 
 Explore the implementation details, training configurations, and experimental results of each E-ConvNeXt application:
 
-| Project                          | Application                                                        | Repository                                                                                                               |
-| -------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| **E-ConvNeXt**                   | Lightweight image classification and feature extraction            | [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/ImageClassification/%40Models/2025_E-ConvNeXt)         |
-| **E-ConvNeXt-YOLO**              | E-ConvNeXt integrated as the YOLO-v10n backbone                    | [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/ObjectDetection/2025_E-ConvNeXt-YOLO)                  |
+| Project                          | Application                                                        |                                                        Repository                                                        |
+| :------------------------------- | :----------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------: |
+| **E-ConvNeXt**                   | Lightweight image classification and feature extraction            |     [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/ImageClassification/%40Models/2025_E-ConvNeXt)     |
+| **E-ConvNeXt-YOLO**              | E-ConvNeXt integrated as the YOLO-v10n backbone                    |          [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/ObjectDetection/2025_E-ConvNeXt-YOLO)         |
 | **E-ConvNeXt-Light-Transformer** | Lightweight encoder–decoder architecture for tiny image captioning | [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/TinyImageCaptioning/2025_E-ConvNeXt-Light-Transformer) |
 
-
+---
 
 ## Hybrid Retrival & Contextiual Re-Ranker
 
-
 <table>
   <tr>
-    <th align="center">Hybrid Retrival Framework</th>
-    <th align="center">Cross Encoder Re-Ranker</th>
-    <th align="center">Contextiual Information Flow</th>
+    <th align="center" width="33%">Hybrid Retrival Framework</th>
+    <th align="center" width="33%">Cross Encoder Re-Ranker</th>
+    <th align="center" width="33%">Contextiual Information Flow</th>
   </tr>
   <tr>
-    <td align="center" width="33%">
+    <td align="center" valign="middle">
       <img
         src="__Report__/ModuleConcept/Contextiual-Retrival/Hybrid-Retrival.png"
         alt="Hybrid Retrival Framework"
         width="100%"
       />
     </td>
-    <td align="center" width="33%">
+    <td align="center" valign="middle">
       <img
         src="__Report__/ModuleConcept/Contextiual-Retrival/Cross-Encoder-Retrival.png"
         alt="Cross Encoder Re-Ranker"
         width="100%"
       />
     </td>
-    <td align="center" width="33%">
+    <td align="center" valign="middle">
       <img
         src="__Report__/ModuleConcept/Contextiual-Retrival/Information-Flow.png"
         alt="Contextiual Information Flow"
@@ -119,19 +139,19 @@ Explore the implementation details, training configurations, and experimental re
     </td>
   </tr>
   <tr>
-    <td align="center">
+    <td align="center" valign="top">
       <sub>Generate candidate using hybrid search.</sub>
     </td>
-    <td align="center">
+    <td align="center" valign="top">
       <sub>Using semantic reordering to fit the context.</sub>
     </td>
-    <td align="center">
+    <td align="center" valign="top">
       <sub>Exquisitely designed information flow network.</sub>
     </td>
   </tr>
 </table>
 
-
+---
 
 ## Quick start
 
@@ -148,6 +168,8 @@ Open:
 ```text
 http://127.0.0.1:5000
 ```
+
+---
 
 ## Main folders
 
@@ -167,6 +189,8 @@ uploads/                    Runtime uploaded images
 data/local_memory/          Future local research memory location
 ```
 
+---
+
 ## API endpoints
 
 ### `GET /`
@@ -177,10 +201,10 @@ Renders the browser interface.
 
 Multipart form fields:
 
-| Field | Type | Required | Description |
-|---|---:|---:|---|
-| `image` | file | yes | One ecological observation image. |
-| `query` | text | yes | Research question or retrieval intent. |
+| Field   | Type | Required | Description                            |
+| :------ | ---: | -------: | :------------------------------------- |
+| `image` | file |      yes | One ecological observation image.      |
+| `query` | text |      yes | Research question or retrieval intent. |
 
 ### `GET /api/modules`
 
@@ -189,6 +213,8 @@ Returns active module metadata.
 ### `GET /healthz`
 
 Health check.
+
+---
 
 ## Drop-in module contract
 
@@ -224,6 +250,8 @@ def process(context):
     }
 ```
 
+---
+
 ## Context object
 
 Each module receives:
@@ -246,16 +274,20 @@ context = {
 }
 ```
 
+---
+
 ## Default modules
 
-| ID | Stage | Purpose |
-|---|---|---|
-| `m1_detector` | M1 | Placeholder genus-level detection and bounding boxes. |
-| `m2_context` | M2 | Placeholder visual context caption and query expansion terms. |
-| `m3_classifier` | M3 | Placeholder species candidates and CIL metric stubs. |
-| `m4_retrieval` | M4 | Placeholder hybrid retrieval and compact document cards. |
-| `m5_reranker` | M5 | Placeholder contextual relevance scoring and top documents. |
-| `m6_llm` | M6 | Placeholder local LLM synthesis and evidence package. |
+| ID              | Stage | Purpose                                                       |
+| :-------------- | :---: | :------------------------------------------------------------ |
+| `m1_detector`   |   M1  | Placeholder genus-level detection and bounding boxes.         |
+| `m2_context`    |   M2  | Placeholder visual context caption and query expansion terms. |
+| `m3_classifier` |   M3  | Placeholder species candidates and CIL metric stubs.          |
+| `m4_retrieval`  |   M4  | Placeholder hybrid retrieval and compact document cards.      |
+| `m5_reranker`   |   M5  | Placeholder contextual relevance scoring and top documents.   |
+| `m6_llm`        |   M6  | Placeholder local LLM synthesis and evidence package.         |
+
+---
 
 ## Notes for connecting real models
 

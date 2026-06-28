@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>🌿</h1>
+<img src="__Report__/E-pluribus-Icon.png" alt="E pluribus Project Icon" width="140" />  
 
 # E pluribus : A Multi-Task Vision-Query2Contextual Framework for Ecological Research Assistant
 

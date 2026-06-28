@@ -1,6 +1,7 @@
 model_weights/
 uploads/
 logs/
+__Report__/ProjectReport.odt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -16,7 +16,7 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
 
 ---
 
-```html
+
 <div align="center">
 
 ## Full Project Report
@@ -33,7 +33,7 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
 </a>
 
 </div>
-```
+
 
 
 

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>E pluribus | Ecological Research Assistant</title>
+
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/styles.css') }}"
+  >
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="brand-block">
+      <div class="brand-mark">E</div>
+
+      <div>
+        <p class="eyebrow">
+          Multi-task Vision-Query2Contextual Framework
+        </p>
+
+        <h1>E pluribus Research Assistant</h1>
+      </div>
+    </div>
+
+    <div class="status-pill" id="healthStatus">
+      Prototype
+    </div>
+  </header>
+
+
+  <main class="layout-shell">
+
+    <!-- =====================================================
+         Left column: Image and research query
+    ====================================================== -->
+    <section
+      class="input-panel"
+      aria-labelledby="inputTitle"
+    >
+      <div class="panel-heading">
+        <p class="section-label">
+          Observation Input
+        </p>
+
+        <h2 id="inputTitle">
+          Image and research query
+        </h2>
+
+        <p class="muted">
+          Upload one ecological field image and provide the research
+          intent. The current backend returns structured placeholder
+          outputs for M1–M6.
+        </p>
+      </div>
+
+
+      <form id="analysisForm" class="analysis-form">
+
+        <label
+          class="drop-zone"
+          for="imageInput"
+          id="dropZone"
+        >
+          <input
+            id="imageInput"
+            name="image"
+            type="file"
+            accept="image/*"
+            required
+          >
+
+          <span class="drop-icon" aria-hidden="true">
+            ↥
+          </span>
+
+          <span class="drop-title">
+            Choose or drop one image
+          </span>
+
+          <span class="drop-subtitle">
+            PNG, JPG, WEBP, TIFF up to configured limit
+          </span>
+        </label>
+
+
+        <div
+          class="preview-card is-hidden"
+          id="previewCard"
+        >
+          <img
+            id="imagePreview"
+            alt="Selected observation preview"
+          >
+
+          <div class="preview-information">
+            <span class="small-label">
+              Selected file
+            </span>
+
+            <strong id="fileName">
+              —
+            </strong>
+          </div>
+        </div>
+
+
+        <label
+          class="field-label"
+          for="queryInput"
+        >
+          Research query
+        </label>
+
+        <textarea
+          id="queryInput"
+          name="query"
+          rows="7"
+          required
+          placeholder="Example: What habitat or conservation evidence is relevant to this observed species?"
+        ></textarea>
+
+
+        <button
+          type="submit"
+          class="primary-button"
+          id="submitButton"
+        >
+          <span>Run analysis</span>
+          <span class="button-meta">M1 → M6</span>
+        </button>
+
+      </form>
+    </section>
+
+
+    <!-- =====================================================
+         Right column: Final synthesis
+    ====================================================== -->
+    <section
+      class="result-panel"
+      aria-live="polite"
+      aria-labelledby="resultTitle"
+    >
+      <div class="result-header">
+        <div>
+          <p class="section-label">
+            LLM Result
+          </p>
+
+          <h2 id="resultTitle">
+            Research synthesis
+          </h2>
+        </div>
+
+        <button
+          type="button"
+          class="secondary-button"
+          id="loadModulesButton"
+        >
+          View active modules
+        </button>
+      </div>
+
+
+      <div class="result-content">
+
+        <div
+          class="empty-state"
+          id="emptyState"
+        >
+          <h3>No run yet</h3>
+
+          <p>
+            Results will appear here after submitting an image and query.
+            The output follows the final research assistant workflow, so
+            modules can be replaced incrementally.
+          </p>
+        </div>
+
+
+        <div
+          class="loading-card is-hidden"
+          id="loadingCard"
+        >
+          <div class="loader"></div>
+
+          <div>
+            <strong>Running pipeline</strong>
+
+            <p>
+              Executing modular backend stages and preparing evidence
+              package.
+            </p>
+          </div>
+        </div>
+
+
+        <article
+          class="answer-card is-hidden"
+          id="answerCard"
+        >
+          <div class="card-topline">
+            <span class="badge">
+              Final synthesis
+            </span>
+
+            <span
+              id="requestId"
+              class="request-id"
+            ></span>
+          </div>
+
+          <div
+            id="finalAnswer"
+            class="final-answer"
+          ></div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         Full-width collapsible pipeline trace
+    ====================================================== -->
+    <details
+      class="trace-section is-hidden"
+      id="traceSection"
+    >
+      <summary class="trace-summary">
+        <div class="trace-summary-title">
+          <span
+            class="trace-toggle-icon"
+            aria-hidden="true"
+          >
+            ›
+          </span>
+
+          <div>
+            <p class="section-label">
+              System Processing
+            </p>
+
+            <h2>Pipeline trace</h2>
+          </div>
+        </div>
+
+        <span
+          class="muted"
+          id="traceMeta"
+        ></span>
+      </summary>
+
+      <div class="trace-content">
+        <div
+          class="trace-list"
+          id="traceList"
+        ></div>
+      </div>
+    </details>
+
+
+    <!-- =====================================================
+         Full-width evidence documents
+    ====================================================== -->
+    <section
+      class="documents-section is-hidden"
+      id="documentsSection"
+    >
+      <div class="section-row documents-header">
+        <div>
+          <p class="section-label">
+            Contextual Evidence
+          </p>
+
+          <h2>Top evidence documents</h2>
+        </div>
+
+        <span class="muted">
+          Selected by M5 context-aware reranker
+        </span>
+      </div>
+
+      <div
+        class="document-list"
+        id="documentList"
+      ></div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       Active modules dialog
+  ====================================================== -->
+  <dialog
+    id="moduleDialog"
+    class="module-dialog"
+  >
+    <div class="dialog-header">
+      <div>
+        <p class="section-label">
+          System Configuration
+        </p>
+
+        <h2>Active modules</h2>
+      </div>
+
+      <button
+        type="button"
+        id="closeDialog"
+        class="icon-button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+    </div>
+
+    <div
+      id="moduleList"
+      class="module-list"
+    ></div>
+  </dialog>
+
+
+  <script
+    src="{{ url_for('static', filename='js/app.js') }}"
+  ></script>
+</body>
+</html>

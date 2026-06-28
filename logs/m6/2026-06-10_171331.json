@@ -1,0 +1,439 @@
+{
+  "query": "introduce this kind of species to me",
+  "prompt": "You are an ecology research assistant.\n\nRespond in Traditional Chinese.\n\nUse ONLY the provided visual context and paper evidence.\nDo not invent papers, DOIs, species, or facts.\nIf evidence is weak or unrelated, explicitly say so.\nReject irrelevant domains such as pure math, physics, computer science, or non-biological engineering unless they are clearly connected to ecology.\n\nUser research question:\nintroduce this kind of species to me\n\nVisual evidence from M1-M3:\n{\n  \"detections\": [\n    {\n      \"label\": \"sheep\",\n      \"genus\": \"sheep\",\n      \"class_id\": 18,\n      \"confidence\": 0.846397,\n      \"bbox_xyxy_abs\": [\n        3229.47,\n        1471.39,\n        5783.32,\n        3298.55\n      ],\n      \"bbox_xyxy_norm\": [\n        0.459384,\n        0.269288,\n        0.822663,\n        0.603688\n      ],\n      \"bbox_xywh_norm\": [\n        0.641024,\n        0.436488,\n        0.363278,\n        0.3344\n      ]\n    },\n    {\n      \"label\": \"sheep\",\n      \"genus\": \"sheep\",\n      \"class_id\": 18,\n      \"confidence\": 0.795587,\n      \"bbox_xyxy_abs\": [\n        1192.81,\n        2373.71,\n        3453.33,\n        3760.71\n      ],\n      \"bbox_xyxy_norm\": [\n        0.169674,\n        0.434427,\n        0.491227,\n        0.68827\n      ],\n      \"bbox_xywh_norm\": [\n        0.33045,\n        0.561349,\n        0.321553,\n        0.253843\n      ]\n    },\n    {\n      \"label\": \"dog\",\n      \"genus\": \"dog\",\n      \"class_id\": 16,\n      \"confidence\": 0.416337,\n      \"bbox_xyxy_abs\": [\n        1190.72,\n        2367.48,\n        3449.58,\n        3751.77\n      ],\n      \"bbox_xyxy_norm\": [\n        0.169377,\n        0.433287,\n        0.490695,\n        0.686633\n      ],\n      \"bbox_xywh_norm\": [\n        0.330036,\n        0.55996,\n        0.321318,\n        0.253346\n      ]\n    }\n  ],\n  \"caption\": \"a dog and a cat playing in the water.\",\n  \"visual_context_terms\": [\n    \"sheep\",\n    \"dog\",\n    \"and\",\n    \"cat\",\n    \"playing\",\n    \"the\",\n    \"water\",\n    \"habitat\",\n    \"vegetation\",\n    \"field observation\",\n    \"species\",\n    \"ecology\"\n  ],\n  \"species_candidates\": [\n    {\n      \"rank\": 1,\n      \"class_id\": 3,\n      \"scientific_name\": \"Red_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.929079,\n      \"crop_index\": 3,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"dog\",\n      \"m1_label\": \"dog\"\n    },\n    {\n      \"rank\": 1,\n      \"class_id\": 3,\n      \"scientific_name\": \"Red_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.928839,\n      \"crop_index\": 2,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"sheep\",\n      \"m1_label\": \"sheep\"\n    },\n    {\n      \"rank\": 1,\n      \"class_id\": 3,\n      \"scientific_name\": \"Red_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.674948,\n      \"crop_index\": 1,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"sheep\",\n      \"m1_label\": \"sheep\"\n    },\n    {\n      \"rank\": 2,\n      \"class_id\": 1,\n      \"scientific_name\": \"Fennec_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.250791,\n      \"crop_index\": 1,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"sheep\",\n      \"m1_label\": \"sheep\"\n    },\n    {\n      \"rank\": 3,\n      \"class_id\": 2,\n      \"scientific_name\": \"Gray_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.044555,\n      \"crop_index\": 1,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"sheep\",\n      \"m1_label\": \"sheep\"\n    },\n    {\n      \"rank\": 4,\n      \"class_id\": 0,\n      \"scientific_name\": \"Arctic_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.029706,\n      \"crop_index\": 1,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"sheep\",\n      \"m1_label\": \"sheep\"\n    },\n    {\n      \"rank\": 2,\n      \"class_id\": 1,\n      \"scientific_name\": \"Fennec_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.025712,\n      \"crop_index\": 2,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"sheep\",\n      \"m1_label\": \"sheep\"\n    },\n    {\n      \"rank\": 2,\n      \"class_id\": 1,\n      \"scientific_name\": \"Fennec_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.025266,\n      \"crop_index\": 3,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"dog\",\n      \"m1_label\": \"dog\"\n    },\n    {\n      \"rank\": 3,\n      \"class_id\": 2,\n      \"scientific_name\": \"Gray_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.023678,\n      \"crop_index\": 2,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"sheep\",\n      \"m1_label\": \"sheep\"\n    },\n    {\n      \"rank\": 3,\n      \"class_id\": 2,\n      \"scientific_name\": \"Gray_Fox\",\n      \"common_name\": null,\n      \"confidence\": 0.023599,\n      \"crop_index\": 3,\n      \"classifier_id\": \"default\",\n      \"input_mode\": \"m1_crop\",\n      \"m1_genus\": \"dog\",\n      \"m1_label\": \"dog\"\n    }\n  ],\n  \"crop_predictions\": [\n    {\n      \"crop_index\": 1,\n      \"input_mode\": \"m1_crop\",\n      \"classifier_id\": \"default\",\n      \"model_variant\": \"mini\",\n      \"model_path\": \"E:\\\\Work_Space\\\\EcoSystem\\\\Terminal\\\\model_weights\\\\m3_econvnext\\\\FoxSpecies_econvnext_mini_best.pth\",\n      \"class_names_path\": \"E:\\\\Work_Space\\\\EcoSystem\\\\Terminal\\\\app\\\\modules\\\\custom\\\\M3\\\\classes.txt\",\n      \"crop_info\": {\n        \"source\": \"m1_detection\",\n        \"bbox_xyxy_abs_used\": [\n          3102,\n          1380,\n          5911,\n          3390\n        ],\n        \"m1_label\": \"sheep\",\n        \"m1_genus\": \"sheep\",\n        \"m1_class_id\": 18,\n        \"m1_confidence\": 0.846397\n      },\n      \"species_candidates\": [\n        {\n          \"rank\": 1,\n          \"class_id\": 3,\n          \"scientific_name\": \"Red_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.674948\n        },\n        {\n          \"rank\": 2,\n          \"class_id\": 1,\n          \"scientific_name\": \"Fennec_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.250791\n        },\n        {\n          \"rank\": 3,\n          \"class_id\": 2,\n          \"scientific_name\": \"Gray_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.044555\n        },\n        {\n          \"rank\": 4,\n          \"class_id\": 0,\n          \"scientific_name\": \"Arctic_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.029706\n        }\n      ],\n      \"top_prediction\": {\n        \"rank\": 1,\n        \"class_id\": 3,\n        \"scientific_name\": \"Red_Fox\",\n        \"common_name\": null,\n        \"confidence\": 0.674948\n      }\n    },\n    {\n      \"crop_index\": 2,\n      \"input_mode\": \"m1_crop\",\n      \"classifier_id\": \"default\",\n      \"model_variant\": \"mini\",\n      \"model_path\": \"E:\\\\Work_Space\\\\EcoSystem\\\\Terminal\\\\model_weights\\\\m3_econvnext\\\\FoxSpecies_econvnext_mini_best.pth\",\n      \"class_names_path\": \"E:\\\\Work_Space\\\\EcoSystem\\\\Terminal\\\\app\\\\modules\\\\custom\\\\M3\\\\classes.txt\",\n      \"crop_info\": {\n        \"source\": \"m1_detection\",\n        \"bbox_xyxy_abs_used\": [\n          1080,\n          2304,\n          3566,\n          3830\n        ],\n        \"m1_label\": \"sheep\",\n        \"m1_genus\": \"sheep\",\n        \"m1_class_id\": 18,\n        \"m1_confidence\": 0.795587\n      },\n      \"species_candidates\": [\n        {\n          \"rank\": 1,\n          \"class_id\": 3,\n          \"scientific_name\": \"Red_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.928839\n        },\n        {\n          \"rank\": 2,\n          \"class_id\": 1,\n          \"scientific_name\": \"Fennec_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.025712\n        },\n        {\n          \"rank\": 3,\n          \"class_id\": 2,\n          \"scientific_name\": \"Gray_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.023678\n        },\n        {\n          \"rank\": 4,\n          \"class_id\": 0,\n          \"scientific_name\": \"Arctic_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.021771\n        }\n      ],\n      \"top_prediction\": {\n        \"rank\": 1,\n        \"class_id\": 3,\n        \"scientific_name\": \"Red_Fox\",\n        \"common_name\": null,\n        \"confidence\": 0.928839\n      }\n    },\n    {\n      \"crop_index\": 3,\n      \"input_mode\": \"m1_crop\",\n      \"classifier_id\": \"default\",\n      \"model_variant\": \"mini\",\n      \"model_path\": \"E:\\\\Work_Space\\\\EcoSystem\\\\Terminal\\\\model_weights\\\\m3_econvnext\\\\FoxSpecies_econvnext_mini_best.pth\",\n      \"class_names_path\": \"E:\\\\Work_Space\\\\EcoSystem\\\\Terminal\\\\app\\\\modules\\\\custom\\\\M3\\\\classes.txt\",\n      \"crop_info\": {\n        \"source\": \"m1_detection\",\n        \"bbox_xyxy_abs_used\": [\n          1078,\n          2298,\n          3563,\n          3821\n        ],\n        \"m1_label\": \"dog\",\n        \"m1_genus\": \"dog\",\n        \"m1_class_id\": 16,\n        \"m1_confidence\": 0.416337\n      },\n      \"species_candidates\": [\n        {\n          \"rank\": 1,\n          \"class_id\": 3,\n          \"scientific_name\": \"Red_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.929079\n        },\n        {\n          \"rank\": 2,\n          \"class_id\": 1,\n          \"scientific_name\": \"Fennec_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.025266\n        },\n        {\n          \"rank\": 3,\n          \"class_id\": 2,\n          \"scientific_name\": \"Gray_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.023599\n        },\n        {\n          \"rank\": 4,\n          \"class_id\": 0,\n          \"scientific_name\": \"Arctic_Fox\",\n          \"common_name\": null,\n          \"confidence\": 0.022056\n        }\n      ],\n      \"top_prediction\": {\n        \"rank\": 1,\n        \"class_id\": 3,\n        \"scientific_name\": \"Red_Fox\",\n        \"common_name\": null,\n        \"confidence\": 0.929079\n      }\n    }\n  ]\n}\n\nTop papers selected by M5:\n\nPaper 1\nTitle: Characteristics of Habitat for Mountain Sheep\nYear: 2026\nSource: CrossRef\nDOI: 10.1201/9781003518686-22\nContextual relevance score: 0.455865\nMatched ecology keywords: habitat\nAbstract:\n\n\nPaper 2\nTitle: Threats to Mountain Sheep Habitat\nYear: 2026\nSource: CrossRef\nDOI: 10.1201/9781003518686-24\nContextual relevance score: 0.414532\nMatched ecology keywords: habitat\nAbstract:\n\n\nPaper 3\nTitle: Home Ranges and Habitat Selection\nYear: 2019\nSource: CrossRef\nDOI: 10.2307/j.ctvs32snm.6\nContextual relevance score: 0.382528\nMatched ecology keywords: habitat\nAbstract:\n\n\n\nOutput format:\n1. Summary Answer\n2. Visual observation interpretation\n3. Paper relevance explanation\n4. Useful follow-up research directions\n5. Uncertainty and limitations",
+  "answer": "**Summary Answer**\n\nBased on the visual evidence and papers selected by M5, I introduce a new species that is likely to be present in this ecosystem: **Red Fox** (Vulpes vulpes). The visual detection data suggests the presence of sheep and dogs in the habitat, which aligns with the findings of Papers 1-3. The top prediction for each crop index indicates Red Fox as the most likely candidate species.\n\n**Visual Observation Interpretation**\n\nThe visual evidence provides bounding box coordinates for three detections: two of sheep (labels) and one of dog (label). The confidence levels range from 0.795587 to 0.846397, indicating high accuracy in detecting these species. The presence of sheep and dogs suggests a terrestrial or semi-terrestrial ecosystem with a moderate level of vegetation.\n\n**Paper Relevance Explanation**\n\nPapers 1-3 are all relevant to the ecological context and provide insights into habitat characteristics for mountain sheep. Papers 1 and 2 specifically discuss threats and conservation strategies for mountain sheep habitats, which may be applicable to this ecosystem. Paper 3 explores home ranges and habitat selection in a broader ecological context.\n\n**Useful Follow-up Research Directions**\n\n1. Conduct a more detailed analysis of the visual detection data to identify patterns or correlations between species presence and environmental factors.\n2. Investigate the feasibility of using machine learning models to predict Red Fox presence based on environmental variables.\n3. Explore the application of Papers 1-3 in this specific ecosystem, considering how conservation strategies might be adapted for the habitat.\n\n**Uncertainty and Limitations**\n\nWhile the visual detection data suggests the presence of sheep and dogs, it is unclear whether these species are interacting with each other or with potential Red Fox individuals. Additionally, the limited contextual information provided by Papers 1-3 does not explicitly address Red Fox ecology in this specific ecosystem. Further research would be needed to understand the interplay between these species and their habitats.",
+  "evidence_package": {
+    "visual_context": {
+      "detections": [
+        {
+          "label": "sheep",
+          "genus": "sheep",
+          "class_id": 18,
+          "confidence": 0.846397,
+          "bbox_xyxy_abs": [
+            3229.47,
+            1471.39,
+            5783.32,
+            3298.55
+          ],
+          "bbox_xyxy_norm": [
+            0.459384,
+            0.269288,
+            0.822663,
+            0.603688
+          ],
+          "bbox_xywh_norm": [
+            0.641024,
+            0.436488,
+            0.363278,
+            0.3344
+          ]
+        },
+        {
+          "label": "sheep",
+          "genus": "sheep",
+          "class_id": 18,
+          "confidence": 0.795587,
+          "bbox_xyxy_abs": [
+            1192.81,
+            2373.71,
+            3453.33,
+            3760.71
+          ],
+          "bbox_xyxy_norm": [
+            0.169674,
+            0.434427,
+            0.491227,
+            0.68827
+          ],
+          "bbox_xywh_norm": [
+            0.33045,
+            0.561349,
+            0.321553,
+            0.253843
+          ]
+        },
+        {
+          "label": "dog",
+          "genus": "dog",
+          "class_id": 16,
+          "confidence": 0.416337,
+          "bbox_xyxy_abs": [
+            1190.72,
+            2367.48,
+            3449.58,
+            3751.77
+          ],
+          "bbox_xyxy_norm": [
+            0.169377,
+            0.433287,
+            0.490695,
+            0.686633
+          ],
+          "bbox_xywh_norm": [
+            0.330036,
+            0.55996,
+            0.321318,
+            0.253346
+          ]
+        }
+      ],
+      "caption": "a dog and a cat playing in the water.",
+      "visual_context_terms": [
+        "sheep",
+        "dog",
+        "and",
+        "cat",
+        "playing",
+        "the",
+        "water",
+        "habitat",
+        "vegetation",
+        "field observation",
+        "species",
+        "ecology"
+      ],
+      "species_candidates": [
+        {
+          "rank": 1,
+          "class_id": 3,
+          "scientific_name": "Red_Fox",
+          "common_name": null,
+          "confidence": 0.929079,
+          "crop_index": 3,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "dog",
+          "m1_label": "dog"
+        },
+        {
+          "rank": 1,
+          "class_id": 3,
+          "scientific_name": "Red_Fox",
+          "common_name": null,
+          "confidence": 0.928839,
+          "crop_index": 2,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "sheep",
+          "m1_label": "sheep"
+        },
+        {
+          "rank": 1,
+          "class_id": 3,
+          "scientific_name": "Red_Fox",
+          "common_name": null,
+          "confidence": 0.674948,
+          "crop_index": 1,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "sheep",
+          "m1_label": "sheep"
+        },
+        {
+          "rank": 2,
+          "class_id": 1,
+          "scientific_name": "Fennec_Fox",
+          "common_name": null,
+          "confidence": 0.250791,
+          "crop_index": 1,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "sheep",
+          "m1_label": "sheep"
+        },
+        {
+          "rank": 3,
+          "class_id": 2,
+          "scientific_name": "Gray_Fox",
+          "common_name": null,
+          "confidence": 0.044555,
+          "crop_index": 1,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "sheep",
+          "m1_label": "sheep"
+        },
+        {
+          "rank": 4,
+          "class_id": 0,
+          "scientific_name": "Arctic_Fox",
+          "common_name": null,
+          "confidence": 0.029706,
+          "crop_index": 1,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "sheep",
+          "m1_label": "sheep"
+        },
+        {
+          "rank": 2,
+          "class_id": 1,
+          "scientific_name": "Fennec_Fox",
+          "common_name": null,
+          "confidence": 0.025712,
+          "crop_index": 2,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "sheep",
+          "m1_label": "sheep"
+        },
+        {
+          "rank": 2,
+          "class_id": 1,
+          "scientific_name": "Fennec_Fox",
+          "common_name": null,
+          "confidence": 0.025266,
+          "crop_index": 3,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "dog",
+          "m1_label": "dog"
+        },
+        {
+          "rank": 3,
+          "class_id": 2,
+          "scientific_name": "Gray_Fox",
+          "common_name": null,
+          "confidence": 0.023678,
+          "crop_index": 2,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "sheep",
+          "m1_label": "sheep"
+        },
+        {
+          "rank": 3,
+          "class_id": 2,
+          "scientific_name": "Gray_Fox",
+          "common_name": null,
+          "confidence": 0.023599,
+          "crop_index": 3,
+          "classifier_id": "default",
+          "input_mode": "m1_crop",
+          "m1_genus": "dog",
+          "m1_label": "dog"
+        }
+      ],
+      "crop_predictions": [
+        {
+          "crop_index": 1,
+          "input_mode": "m1_crop",
+          "classifier_id": "default",
+          "model_variant": "mini",
+          "model_path": "E:\\Work_Space\\EcoSystem\\Terminal\\model_weights\\m3_econvnext\\FoxSpecies_econvnext_mini_best.pth",
+          "class_names_path": "E:\\Work_Space\\EcoSystem\\Terminal\\app\\modules\\custom\\M3\\classes.txt",
+          "crop_info": {
+            "source": "m1_detection",
+            "bbox_xyxy_abs_used": [
+              3102,
+              1380,
+              5911,
+              3390
+            ],
+            "m1_label": "sheep",
+            "m1_genus": "sheep",
+            "m1_class_id": 18,
+            "m1_confidence": 0.846397
+          },
+          "species_candidates": [
+            {
+              "rank": 1,
+              "class_id": 3,
+              "scientific_name": "Red_Fox",
+              "common_name": null,
+              "confidence": 0.674948
+            },
+            {
+              "rank": 2,
+              "class_id": 1,
+              "scientific_name": "Fennec_Fox",
+              "common_name": null,
+              "confidence": 0.250791
+            },
+            {
+              "rank": 3,
+              "class_id": 2,
+              "scientific_name": "Gray_Fox",
+              "common_name": null,
+              "confidence": 0.044555
+            },
+            {
+              "rank": 4,
+              "class_id": 0,
+              "scientific_name": "Arctic_Fox",
+              "common_name": null,
+              "confidence": 0.029706
+            }
+          ],
+          "top_prediction": {
+            "rank": 1,
+            "class_id": 3,
+            "scientific_name": "Red_Fox",
+            "common_name": null,
+            "confidence": 0.674948
+          }
+        },
+        {
+          "crop_index": 2,
+          "input_mode": "m1_crop",
+          "classifier_id": "default",
+          "model_variant": "mini",
+          "model_path": "E:\\Work_Space\\EcoSystem\\Terminal\\model_weights\\m3_econvnext\\FoxSpecies_econvnext_mini_best.pth",
+          "class_names_path": "E:\\Work_Space\\EcoSystem\\Terminal\\app\\modules\\custom\\M3\\classes.txt",
+          "crop_info": {
+            "source": "m1_detection",
+            "bbox_xyxy_abs_used": [
+              1080,
+              2304,
+              3566,
+              3830
+            ],
+            "m1_label": "sheep",
+            "m1_genus": "sheep",
+            "m1_class_id": 18,
+            "m1_confidence": 0.795587
+          },
+          "species_candidates": [
+            {
+              "rank": 1,
+              "class_id": 3,
+              "scientific_name": "Red_Fox",
+              "common_name": null,
+              "confidence": 0.928839
+            },
+            {
+              "rank": 2,
+              "class_id": 1,
+              "scientific_name": "Fennec_Fox",
+              "common_name": null,
+              "confidence": 0.025712
+            },
+            {
+              "rank": 3,
+              "class_id": 2,
+              "scientific_name": "Gray_Fox",
+              "common_name": null,
+              "confidence": 0.023678
+            },
+            {
+              "rank": 4,
+              "class_id": 0,
+              "scientific_name": "Arctic_Fox",
+              "common_name": null,
+              "confidence": 0.021771
+            }
+          ],
+          "top_prediction": {
+            "rank": 1,
+            "class_id": 3,
+            "scientific_name": "Red_Fox",
+            "common_name": null,
+            "confidence": 0.928839
+          }
+        },
+        {
+          "crop_index": 3,
+          "input_mode": "m1_crop",
+          "classifier_id": "default",
+          "model_variant": "mini",
+          "model_path": "E:\\Work_Space\\EcoSystem\\Terminal\\model_weights\\m3_econvnext\\FoxSpecies_econvnext_mini_best.pth",
+          "class_names_path": "E:\\Work_Space\\EcoSystem\\Terminal\\app\\modules\\custom\\M3\\classes.txt",
+          "crop_info": {
+            "source": "m1_detection",
+            "bbox_xyxy_abs_used": [
+              1078,
+              2298,
+              3563,
+              3821
+            ],
+            "m1_label": "dog",
+            "m1_genus": "dog",
+            "m1_class_id": 16,
+            "m1_confidence": 0.416337
+          },
+          "species_candidates": [
+            {
+              "rank": 1,
+              "class_id": 3,
+              "scientific_name": "Red_Fox",
+              "common_name": null,
+              "confidence": 0.929079
+            },
+            {
+              "rank": 2,
+              "class_id": 1,
+              "scientific_name": "Fennec_Fox",
+              "common_name": null,
+              "confidence": 0.025266
+            },
+            {
+              "rank": 3,
+              "class_id": 2,
+              "scientific_name": "Gray_Fox",
+              "common_name": null,
+              "confidence": 0.023599
+            },
+            {
+              "rank": 4,
+              "class_id": 0,
+              "scientific_name": "Arctic_Fox",
+              "common_name": null,
+              "confidence": 0.022056
+            }
+          ],
+          "top_prediction": {
+            "rank": 1,
+            "class_id": 3,
+            "scientific_name": "Red_Fox",
+            "common_name": null,
+            "confidence": 0.929079
+          }
+        }
+      ]
+    },
+    "top_documents": [
+      {
+        "rank": 1,
+        "title": "Characteristics of Habitat for Mountain Sheep",
+        "abstract": "",
+        "year": "2026",
+        "source": "CrossRef",
+        "doi": "10.1201/9781003518686-22",
+        "url": "https://doi.org/10.1201/9781003518686-22",
+        "contextual_relevance": 0.455865,
+        "matched_keywords": [
+          "habitat"
+        ]
+      },
+      {
+        "rank": 2,
+        "title": "Threats to Mountain Sheep Habitat",
+        "abstract": "",
+        "year": "2026",
+        "source": "CrossRef",
+        "doi": "10.1201/9781003518686-24",
+        "url": "https://doi.org/10.1201/9781003518686-24",
+        "contextual_relevance": 0.414532,
+        "matched_keywords": [
+          "habitat"
+        ]
+      },
+      {
+        "rank": 3,
+        "title": "Home Ranges and Habitat Selection",
+        "abstract": "",
+        "year": "2019",
+        "source": "CrossRef",
+        "doi": "10.2307/j.ctvs32snm.6",
+        "url": "https://doi.org/10.2307/j.ctvs32snm.6",
+        "contextual_relevance": 0.382528,
+        "matched_keywords": [
+          "habitat"
+        ]
+      }
+    ],
+    "llm_model": "llama3",
+    "llm_error": null
+  }
+}

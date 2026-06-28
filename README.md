@@ -16,11 +16,25 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
 
 ---
 
-## Full Report
+```html
+<div align="center">
 
-The complete project report is available in PDF format:
+## Full Project Report
 
-[Download the Project Report (PDF)](./__Report__/ProjectReport.pdf)
+<p>
+  The complete project report is available in PDF format.
+</p>
+
+<a href="./__Report__/ProjectReport.pdf">
+  <img
+    src="https://img.shields.io/badge/Download-Project%20Report-2563EB?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"
+    alt="Download the Project Report"
+  />
+</a>
+
+</div>
+```
+
 
 
 ## Research Project & Product

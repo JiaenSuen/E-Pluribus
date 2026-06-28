@@ -1,0 +1,139 @@
+{
+  "prompt": "You are an ecology and natural-history research assistant for researchers.\n\nRespond in Traditional Chinese.\n\nYour task:\nAnswer the user's original question directly and naturally.\nDo not answer any expanded query.\nDo not reveal search strings, retrieval prompts, model stages, scores, JSON, or implementation details.\n\nOriginal user question:\nintroduce this specise to me\n\nUser intent:\nThe user is asking an ecological or scientific question. Answer the original question directly. Use the selected documents as the main evidence when they are relevant. Also judge whether the documents fit the user's scientific context.\n\nLikely species from image-based classification:\nUse this as the main taxonomic hypothesis.\nIf confidence is available, express uncertainty appropriately.\n{\n  \"scientific_name\": \"Red_Fox\",\n  \"common_name\": null,\n  \"confidence\": 0.92097\n}\n\nScene and behavior context:\nUse this only to describe possible environment, posture, activity, habitat, or visual setting.\nDo not use it as taxonomic proof.\n{\n  \"caption\": \"a small brown and white dog walking down a road.\",\n  \"environment_terms\": [\n    \"road\"\n  ],\n  \"behavior_terms\": [\n    \"walking\"\n  ],\n  \"scene_terms\": [\n    \"small\",\n    \"brown\",\n    \"and\",\n    \"white\",\n    \"dog\",\n    \"down\"\n  ],\n  \"visual_prompt_context\": \"Use the visual caption only as environmental, behavioral, and scene context. Do not treat it as taxonomic evidence. Caption: a small brown and white dog walking down a road.\",\n  \"usage_rule\": \"Use only as environment, behavior, and scene context. Do not use as taxonomic proof.\"\n}\n\nNatural-history background:\nUse this only if available and relevant.\nIt may support a general species introduction, but it should not replace selected literature when the user asks a research question.\n{\n  \"source\": \"Animal Diversity Web\",\n  \"url\": \"https://animaldiversity.org/accounts/Red_Fox/\",\n  \"available\": true,\n  \"scientific_name\": \"Red_Fox\",\n  \"sections\": {},\n  \"summary_text\": \"404 - Page not found | Animal Diversity Web 🎯 \\\"> --> Animal Diversity Web Keywords in feature Everything Information Pictures Specimens Sounds Maps Topics Classification Search Enter one or more keywords. Use quotes to search for a phrase (e.g., wombats or \\\"gray wolves\\\"). More tips in the Search Guide . ADW Sorry Page not found Sorry, we can't find the page you're looking for. Sometimes that happens because a scientific name has been changed or retired. In that case, you can try searching for it or similar content. Keywords in feature Everything Search University of Michigan University of Michigan U-M Museum of Zoology U-M Ecology and Evolutionary Biology Animal Diversity Web Browse Animalia About Us About Animal Names Educational Resources Special Collections Glossary Quaardvark: Explore Data Accessibility Privacy Statement Privacy Statement --> Disclaimer The Animal Diversity Web is an educational resource written largely by and for college students . ADW doesn't cover all species in the world, nor does it include all the latest scientific information about organisms we describe. Though we edit our accounts for accuracy, we cannot guarantee all information in those accounts. While ADW staff and contributors provide references to books and websites that we believe are reputable, we cannot necessarily endorse the contents of references beyond our control. Browse Animalia --> © 2025, Regents of the University of Michigan Contact Our Team Report Error Privacy Consent Preference This website uses some essential cookies to make it work. We’d like to set additional analytics cookies to analyze site usage. We won’t set these additional cookies unless you accept them. Accept Reject\",\n  \"use_rule\": \"Use as natural-history background for the M3 species; still prioritize selected literature for research claims.\"\n}\n\nSelected literature and document evidence:\nUse these documents as the main research evidence when they are relevant to the original question.\nIf the documents are weak, generic, or mismatched, say so briefly and do not overuse them.\nDocument 1\nTitle: Distribution, habitat and diet\nYear: 2002\nSource: CrossRef\nDOI: 10.1071/9780643069886.part02\nContextual relevance: 0.063454\nMatched species terms: \nMatched ecology keywords: habitat, distribution, diet\nAbstract:\n\nDocument 2\nTitle: Peer Review #2 of \"Distribution, habitat suitability, conservation state and natural history of endangered salamander Bolitoglossa pandi (v0.1)\"\nYear: 2020\nSource: CrossRef\nDOI: 10.7287/peerj.9901v0.1/reviews/2\nContextual relevance: 0.051682\nMatched species terms: \nMatched ecology keywords: habitat, conservation, distribution, natural history\nAbstract:\n\nDocument 3\nTitle: Peer Review #1 of \"Distribution, habitat suitability, conservation state and natural history of endangered salamander Bolitoglossa pandi (v0.1)\"\nYear: 2020\nSource: CrossRef\nDOI: 10.7287/peerj.9901v0.1/reviews/1\nContextual relevance: 0.051653\nMatched species terms: \nMatched ecology keywords: habitat, conservation, distribution, natural history\nAbstract:\n\nDocument 4\nTitle: Peer Review #1 of \"Distribution, habitat suitability, conservation state and natural history of endangered salamander Bolitoglossa pandi (v0.2)\"\nYear: 2020\nSource: CrossRef\nDOI: 10.7287/peerj.9901v0.2/reviews/1\nContextual relevance: 0.051603\nMatched species terms: \nMatched ecology keywords: habitat, conservation, distribution, natural history\nAbstract:\n\nDocument 5\nTitle: Shifted distribution baselines: neglecting long-term biodiversity records risks overlooking potentially suitable habitat for conservation management\nYear: 2019\nSource: CrossRef\nDOI: 10.1101/565929\nContextual relevance: 0.03708\nMatched species terms: \nMatched ecology keywords: habitat, biodiversity, species, conservation, environment, distribution\nAbstract:\nABSTRACT Setting appropriate conservation measures to halt the loss of biodiversity requires a good understanding of species’ habitat requirements and potential distribution. Recent (past few decades) ecological data are typically used to estimate and understand species’ ecological niche. However, historical local extinctions may have truncated species-environment relationships, resulting in a biased perception of species’ habitat preferences. This may result in incorrect assessments of the area potentially available for their conservation. Incorporating long-term (centuries-old) occurrence records with recent records may provide better information on species-environment relationships and improve the modeling and understanding of habitat suitability. We test whether neglecting long-term occurrence records leads to an underestimation of species’ historical niche and potential distribution and identify which species are more vulnerable to this effect. We compare outputs of species distribution models and niche hypervolumes built using recent records only with those built using both recent and long-term (post-1500) records, for a set of 34 large mammal species in South Africa. We find...\n\nAnswering rules:\n- Answer the original user question first.\n- For \"what is it\" or simple identification questions, start with the likely species and provide a concise species introduction.\n- For research questions, synthesize the selected literature and explain how well it fits the user's scientific context.\n- Do not call the animal a dog unless the species hypothesis or evidence supports that.\n- Do not invent authors, paper details, DOI, locations, methods, findings, or certainty.\n- Do not discuss bounding boxes, object detection, crop generation, model pipeline, retrieval ranking, or internal modules.\n- Do not output query strings or score formulas.\n- Use scene context only for environment or behavior.\n- Use the species hypothesis as tentative unless confidence is very high.\n- If evidence is insufficient, say what is known, what is uncertain, and what additional evidence would be needed.\n\nOutput style:\nWrite only the final answer for the researcher.\nUse clean paragraphs.\nAvoid empty headings.\nAvoid pipeline jargon.\nDo not output JSON.",
+  "answer": "🐺\n\n(Red Fox) \n\nRed Fox (Vulpes vulpes) is a species of small to medium-sized fox that has a reddish-orange coat, white underside, and bushy tail. They are found in various parts of the world, including Europe, Asia, North America, South America, Africa, and Australia.",
+  "evidence_package": {
+    "primary_species": {
+      "scientific_name": "Red_Fox",
+      "common_name": null,
+      "confidence": 0.92097
+    },
+    "visual_prompt_context": {
+      "caption": "a small brown and white dog walking down a road.",
+      "environment_terms": [
+        "road"
+      ],
+      "behavior_terms": [
+        "walking"
+      ],
+      "scene_terms": [
+        "small",
+        "brown",
+        "and",
+        "white",
+        "dog",
+        "down"
+      ],
+      "visual_prompt_context": "Use the visual caption only as environmental, behavioral, and scene context. Do not treat it as taxonomic evidence. Caption: a small brown and white dog walking down a road.",
+      "usage_rule": "Use only as environment, behavior, and scene context. Do not use as taxonomic proof."
+    },
+    "animal_diversity_web": {
+      "source": "Animal Diversity Web",
+      "url": "https://animaldiversity.org/accounts/Red_Fox/",
+      "available": true,
+      "scientific_name": "Red_Fox",
+      "sections": {},
+      "summary_text": "404 - Page not found | Animal Diversity Web 🎯 \"> --> Animal Diversity Web Keywords in feature Everything Information Pictures Specimens Sounds Maps Topics Classification Search Enter one or more keywords. Use quotes to search for a phrase (e.g., wombats or \"gray wolves\"). More tips in the Search Guide . ADW Sorry Page not found Sorry, we can't find the page you're looking for. Sometimes that happens because a scientific name has been changed or retired. In that case, you can try searching for it or similar content. Keywords in feature Everything Search University of Michigan University of Michigan U-M Museum of Zoology U-M Ecology and Evolutionary Biology Animal Diversity Web Browse Animalia About Us About Animal Names Educational Resources Special Collections Glossary Quaardvark: Explore Data Accessibility Privacy Statement Privacy Statement --> Disclaimer The Animal Diversity Web is an educational resource written largely by and for college students . ADW doesn't cover all species in the world, nor does it include all the latest scientific information about organisms we describe. Though we edit our accounts for accuracy, we cannot guarantee all information in those accounts. While ADW staff and contributors provide references to books and websites that we believe are reputable, we cannot necessarily endorse the contents of references beyond our control. Browse Animalia --> © 2025, Regents of the University of Michigan Contact Our Team Report Error Privacy Consent Preference This website uses some essential cookies to make it work. We’d like to set additional analytics cookies to analyze site usage. We won’t set these additional cookies unless you accept them. Accept Reject",
+      "use_rule": "Use as natural-history background for the M3 species; still prioritize selected literature for research claims."
+    },
+    "top_documents": [
+      {
+        "rank": 1,
+        "title": "Distribution, habitat and diet",
+        "abstract": "",
+        "year": "2002",
+        "source": "CrossRef",
+        "doi": "10.1071/9780643069886.part02",
+        "url": "https://doi.org/10.1071/9780643069886.part02",
+        "contextual_relevance": 0.063454,
+        "retrieval_score": 0.764021,
+        "matched_species_terms": [],
+        "matched_keywords": [
+          "habitat",
+          "distribution",
+          "diet"
+        ]
+      },
+      {
+        "rank": 2,
+        "title": "Peer Review #2 of \"Distribution, habitat suitability, conservation state and natural history of endangered salamander Bolitoglossa pandi (v0.1)\"",
+        "abstract": "",
+        "year": "2020",
+        "source": "CrossRef",
+        "doi": "10.7287/peerj.9901v0.1/reviews/2",
+        "url": "https://doi.org/10.7287/peerj.9901v0.1/reviews/2",
+        "contextual_relevance": 0.051682,
+        "retrieval_score": 0.710568,
+        "matched_species_terms": [],
+        "matched_keywords": [
+          "habitat",
+          "conservation",
+          "distribution",
+          "natural history"
+        ]
+      },
+      {
+        "rank": 3,
+        "title": "Peer Review #1 of \"Distribution, habitat suitability, conservation state and natural history of endangered salamander Bolitoglossa pandi (v0.1)\"",
+        "abstract": "",
+        "year": "2020",
+        "source": "CrossRef",
+        "doi": "10.7287/peerj.9901v0.1/reviews/1",
+        "url": "https://doi.org/10.7287/peerj.9901v0.1/reviews/1",
+        "contextual_relevance": 0.051653,
+        "retrieval_score": 0.710434,
+        "matched_species_terms": [],
+        "matched_keywords": [
+          "habitat",
+          "conservation",
+          "distribution",
+          "natural history"
+        ]
+      },
+      {
+        "rank": 4,
+        "title": "Peer Review #1 of \"Distribution, habitat suitability, conservation state and natural history of endangered salamander Bolitoglossa pandi (v0.2)\"",
+        "abstract": "",
+        "year": "2020",
+        "source": "CrossRef",
+        "doi": "10.7287/peerj.9901v0.2/reviews/1",
+        "url": "https://doi.org/10.7287/peerj.9901v0.2/reviews/1",
+        "contextual_relevance": 0.051603,
+        "retrieval_score": 0.71068,
+        "matched_species_terms": [],
+        "matched_keywords": [
+          "habitat",
+          "conservation",
+          "distribution",
+          "natural history"
+        ]
+      },
+      {
+        "rank": 5,
+        "title": "Shifted distribution baselines: neglecting long-term biodiversity records risks overlooking potentially suitable habitat for conservation management",
+        "abstract": "ABSTRACT Setting appropriate conservation measures to halt the loss of biodiversity requires a good understanding of species’ habitat requirements and potential distribution. Recent (past few decades) ecological data are typically used to estimate and understand species’ ecological niche. However, historical local extinctions may have truncated species-environment relationships, resulting in a biased perception of species’ habitat preferences. This may result in incorrect assessments of the area potentially available for their conservation. Incorporating long-term (centuries-old) occurrence records with recent records may provide better information on species-environment relationships and improve the modeling and understanding of habitat suitability. We test whether neglecting long-term occurrence records leads to an underestimation of species’ historical niche and potential distribution and identify which species are more vulnerable to this effect. We compare outputs of species distribution models and niche hypervolumes built using recent records only with those built using both recent and long-term (post-1500) records, for a set of 34 large mammal species in South Africa. We find...",
+        "year": "2019",
+        "source": "CrossRef",
+        "doi": "10.1101/565929",
+        "url": "https://doi.org/10.1101/565929",
+        "contextual_relevance": 0.03708,
+        "retrieval_score": 0.493773,
+        "matched_species_terms": [],
+        "matched_keywords": [
+          "habitat",
+          "biodiversity",
+          "species",
+          "conservation",
+          "environment",
+          "distribution"
+        ]
+      }
+    ],
+    "llm_model": "llama3",
+    "llm_error": null,
+    "excluded_context": [
+      "M1 detections",
+      "M1 bounding boxes",
+      "M1 detector labels"
+    ]
+  }
+}

@@ -13,6 +13,21 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
 ![image](__Report__/E-pluribus-Poster.png)
 
 
+## System Architecture
+![image](__Report__/ModuleConcept/SystemArchitectute.png)
+
+
+```text
+User image + query
+  -> M1 Visual Detection
+  -> M2 Visual Context Description
+  -> M3 Species Refinement and CIL
+  -> M4 Hybrid Literature Retrieval
+  -> M5 Context-aware EcoReranker
+  -> M6 Local LLM Synthesis
+  -> Flask JSON response + browser UI
+```
+
 
 
 ## E-ConvNeXt Model Applications
@@ -70,18 +85,53 @@ Explore the implementation details, training configurations, and experimental re
 | **E-ConvNeXt-Light-Transformer** | Lightweight encoder–decoder architecture for tiny image captioning | [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/TinyImageCaptioning/2025_E-ConvNeXt-Light-Transformer) |
 
 
-## Architecture
 
-```text
-User image + query
-  -> M1 Visual Detection
-  -> M2 Visual Context Description
-  -> M3 Species Refinement and CIL
-  -> M4 Hybrid Literature Retrieval
-  -> M5 Context-aware EcoReranker
-  -> M6 Local LLM Synthesis
-  -> Flask JSON response + browser UI
-```
+## Hybrid Retrival & Contextiual Re-Ranker
+
+
+<table>
+  <tr>
+    <th align="center">Hybrid Retrival Framework</th>
+    <th align="center">Cross Encoder Re-Ranker</th>
+    <th align="center">Contextiual Information Flow</th>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img
+        src="__Report__/ModuleConcept/Contextiual-Retrival/Hybrid-Retrival.png"
+        alt="Hybrid Retrival Framework"
+        width="100%"
+      />
+    </td>
+    <td align="center" width="33%">
+      <img
+        src="__Report__/ModuleConcept/Contextiual-Retrival/Cross-Encoder-Retrival.png"
+        alt="Cross Encoder Re-Ranker"
+        width="100%"
+      />
+    </td>
+    <td align="center" width="33%">
+      <img
+        src="__Report__/ModuleConcept/Contextiual-Retrival/Information-Flow.png"
+        alt="Contextiual Information Flow"
+        width="100%"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <sub>Generate candidate solutions using hybrid search.</sub>
+    </td>
+    <td align="center">
+      <sub>Using semantic reordering to fit the context.</sub>
+    </td>
+    <td align="center">
+      <sub>Exquisitely designed information flow network.</sub>
+    </td>
+  </tr>
+</table>
+
+
 
 ## Quick start
 

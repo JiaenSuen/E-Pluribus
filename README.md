@@ -120,7 +120,7 @@ Explore the implementation details, training configurations, and experimental re
   </tr>
   <tr>
     <td align="center">
-      <sub>Generate candidate solutions using hybrid search.</sub>
+      <sub>Generate candidate using hybrid search.</sub>
     </td>
     <td align="center">
       <sub>Using semantic reordering to fit the context.</sub>

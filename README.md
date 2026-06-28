@@ -15,18 +15,49 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
 
 
 
-## Models : E-ConvNeXt as Feature Extractor
+## E-ConvNeXt Model Applications
 
-![image](__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt.png)
-
-
-## Models : E-ConvNeXt as Backbone of YOLO-v10n
-![image](__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-YOLO.png)
-
-
-## Models : E-ConvNeXt & Light Transformer for Tiny Image Captioning
-![image](__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-Light-Transformer.png)
-
+<table>
+  <tr>
+    <th align="center">Feature Extractor</th>
+    <th align="center">YOLO-v10n Backbone</th>
+    <th align="center">Tiny Image Captioning</th>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img
+        src="__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt.png"
+        alt="E-ConvNeXt as Feature Extractor"
+        width="100%"
+      />
+    </td>
+    <td align="center" width="33%">
+      <img
+        src="__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-YOLO.png"
+        alt="E-ConvNeXt as Backbone of YOLO-v10n"
+        width="100%"
+      />
+    </td>
+    <td align="center" width="33%">
+      <img
+        src="__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-Light-Transformer.png"
+        alt="E-ConvNeXt and Light Transformer for Tiny Image Captioning"
+        width="100%"
+      />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <sub>E-ConvNeXt as a lightweight feature extractor.</sub>
+    </td>
+    <td align="center">
+      <sub>E-ConvNeXt integrated as the backbone of YOLO-v10n.</sub>
+    </td>
+    <td align="center">
+      <sub>E-ConvNeXt with a Light Transformer decoder.</sub>
+    </td>
+  </tr>
+</table>
 
 
 

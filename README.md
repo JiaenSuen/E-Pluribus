@@ -16,6 +16,13 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
 
 ---
 
+## Full Report
+
+The complete project report is available in PDF format:
+
+[Download the Project Report (PDF)](./__Report__/ProjectReport.pdf)
+
+
 ## Research Project & Product
 
 <p align="center">

@@ -59,6 +59,15 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
   </tr>
 </table>
 
+### Detailed Sub-Experiment Projects
+
+Explore the implementation details, training configurations, and experimental results of each E-ConvNeXt application:
+
+| Project                          | Application                                                        | Repository                                                                                                               |
+| -------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| **E-ConvNeXt**                   | Lightweight image classification and feature extraction            | [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/ImageClassification/%40Models/2025_E-ConvNeXt)         |
+| **E-ConvNeXt-YOLO**              | E-ConvNeXt integrated as the YOLO-v10n backbone                    | [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/ObjectDetection/2025_E-ConvNeXt-YOLO)                  |
+| **E-ConvNeXt-Light-Transformer** | Lightweight encoder–decoder architecture for tiny image captioning | [View Project →](https://github.com/JiaenSuen/VisionLab/tree/main/TinyImageCaptioning/2025_E-ConvNeXt-Light-Transformer) |
 
 
 ## Architecture

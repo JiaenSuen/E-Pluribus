@@ -51,7 +51,7 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
       <sub>E-ConvNeXt as a lightweight feature extractor.</sub>
     </td>
     <td align="center">
-      <sub>E-ConvNeXt integrated as the backbone of YOLO-v10n.</sub>
+      <sub>E-ConvNeXt as the backbone of YOLO-v10n.</sub>
     </td>
     <td align="center">
       <sub>E-ConvNeXt with a Light Transformer decoder.</sub>

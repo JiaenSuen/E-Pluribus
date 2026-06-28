@@ -13,6 +13,23 @@ The backend is intentionally modular. The default M1–M6 modules return placeho
 ![image](__Report__/E-pluribus-Poster.png)
 
 
+
+
+## Models : E-ConvNeXt as Feature Extractor
+
+![image](__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt.png)
+
+
+## Models : E-ConvNeXt as Backbone of YOLO-v10n
+![image](__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-YOLO.png)
+
+
+## Models : E-ConvNeXt & Light Transformer for Tiny Image Captioning
+![image](__Report__/ModuleConcept/E-ConvNeXt/E-ConvNeXt-Light-Transformer.png)
+
+
+
+
 ## Architecture
 
 ```text

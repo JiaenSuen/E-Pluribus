@@ -107,33 +107,33 @@ Explore the implementation details, training configurations, and experimental re
 
 ---
 
-## Hybrid Retrieval & Contextiual Re-Ranker
+## Hybrid Retrieval & Contextual Re-Ranker
 
 <table>
   <tr>
     <th align="center" width="33%">Hybrid Retrieval Framework</th>
     <th align="center" width="33%">Cross Encoder Re-Ranker</th>
-    <th align="center" width="33%">Contextiual Information Flow</th>
+    <th align="center" width="33%">Contexiual Information Flow</th>
   </tr>
   <tr>
     <td align="center" valign="middle">
       <img
-        src="__Report__/ModuleConcept/Contextiual-Retrieval/Hybrid-Retrieval.png"
+        src="__Report__/ModuleConcept/Contextual-Retrieval/Hybrid-Retrieval.png"
         alt="Hybrid Retrieval Framework"
         width="100%"
       />
     </td>
     <td align="center" valign="middle">
       <img
-        src="__Report__/ModuleConcept/Contextiual-Retrieval/Cross-Encoder-Retrieval.png"
+        src="__Report__/ModuleConcept/Contextual-Retrieval/Cross-Encoder-Retrieval.png"
         alt="Cross Encoder Re-Ranker"
         width="100%"
       />
     </td>
     <td align="center" valign="middle">
       <img
-        src="__Report__/ModuleConcept/Contextiual-Retrieval/Information-Flow.png"
-        alt="Contextiual Information Flow"
+        src="__Report__/ModuleConcept/Contextual-Retrieval/Information-Flow.png"
+        alt="Contextual Information Flow"
         width="100%"
       />
     </td>
